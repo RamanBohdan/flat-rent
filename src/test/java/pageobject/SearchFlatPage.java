@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SearchFlatPage extends BasePage{
+public class SearchFlatPage extends BasePage {
 
     @FindBy(xpath = "(//div[@class='fast-links-selection'])[2]")
     private WebElement selectCity;
@@ -17,7 +17,7 @@ public class SearchFlatPage extends BasePage{
 
     public SearchFlatPage(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     public SearchFlatPage getChooseCity(String nameCity) {
@@ -29,7 +29,7 @@ public class SearchFlatPage extends BasePage{
         return this;
     }
 
-    public SearchFlatPage getChooseDistrict(String nameDistrict){
+    public SearchFlatPage getChooseDistrict(String nameDistrict) {
         Actions action = new Actions(driver);
         String selectChooseDistrict = "(//div[@class='fast-links-selection'])[4]";
         action.moveToElement(driver.findElement(By.xpath(String.format(selectChooseDistrict, nameDistrict))))

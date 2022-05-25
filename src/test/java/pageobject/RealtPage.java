@@ -31,7 +31,6 @@ public class RealtPage extends BasePage {
                 regionPlace.click();
                 break;
             }
-
         }
         return this;
     }
